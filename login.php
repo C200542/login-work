@@ -21,7 +21,14 @@ if (!empty($_POST)) {
             $stmt->execute();
 			$member = $stmt->fetch(PDO::FETCH_ASSOC);
 //  ここにパスワードのチェック処理を完成させる
-//  		if( xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ) {
+//  		if( $password == $data['password']) {
+			$_SESSION['name'] = $data['fullname'];
+			$_SESSION['username'] = $data['username'];
+			$_SESSION['password'] = $data['password'];
+			$_SESSION['secretpin'] = $data['secretpin'];
+
+			header('Location: dashboard.php');
+			exit;
 				// ログイン成功
 
 //  ここにセッションハイジャック対策を追加
