@@ -27,7 +27,7 @@ if (!empty($_POST)) {
 			$_SESSION['password'] = $data['password'];
 			$_SESSION['secretpin'] = $data['secretpin'];
 
-			header('Location: dashboard.php');
+			
 			exit;
 				// ログイン成功
 
